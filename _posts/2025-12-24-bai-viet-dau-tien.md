@@ -21,7 +21,7 @@ int main() {
 }
 ```
 
-## Mô phỏng 8051 Interactiv
+## Mô phỏng TASK QUEUE RTOS Interactive
 
 Dưới đây là mô phỏng tương tác của 2 task khi truy cập queue, bạn có thể test code trực tiếp:
 
