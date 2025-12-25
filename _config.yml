@@ -18,10 +18,10 @@ timezone: Asia/Ho_Chi_Minh    # Múi giờ Việt Nam
 # Site Identity
 #+#+#+#+##############################################################################
 
-title: Dũng IoT Notes               # Tiêu đề hiển thị trên Tab trình duyệt
-tagline: Embedded Systems & Automotive
+title: Dũng Embedded Automotive Notes               # Tiêu đề hiển thị trên Tab trình duyệt
+tagline: Embedded Automotive & Linux
 description: >-                        # Mô tả ngắn gọn cho Google Search
-  Chia sẻ kiến thức về Lập trình Nhúng, Ô tô và Công nghệ.
+  Chia sẻ kiến thức về Embedded, Automotive,Linux và các Công nghệ mới nhất.
 
 #+#+#+#+##############################################################################
 # URLs
