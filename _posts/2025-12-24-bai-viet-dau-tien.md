@@ -21,7 +21,7 @@ int main() {
 }
 ```
 
-## Mô phỏng 8051 Interactive
+## Mô phỏng 8051 Interactiv
 
 Dưới đây là mô phỏng tương tác, bạn có thể test code trực tiếp:
 
