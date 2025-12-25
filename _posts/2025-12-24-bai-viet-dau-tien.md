@@ -7,10 +7,10 @@ tags: [hello, embedded]
 
 ## Chào thế giới
 
-Đây là bài viết test blog kỹ thuật của tôi. Blog này được xây dựng dựa trên tư duy **Docs-as-Code**.
+Đây là bài viết test blog kỹ thuật của mình. Blog này được xây dựng dựa trên tư duy **Docs-as-Code**.
 
 ### Ví dụ về Code C
-Tôi là dân Embedded nên blog phải hiển thị code đẹp:
+Mình là dân Embedded :
 
 ```c
 #include <stdio.h>
@@ -27,11 +27,11 @@ Dưới đây là mô phỏng tương tác, bạn có thể test code trực ti�
 
 <div style="width: 100%; margin: 20px 0;">
     <iframe
-        src="/assets/sims/8bit-pc-sim.html"
+        src="/assets/sims/mo_phong_stm32_queue.html"
         width="100%"
         height="500px"
         style="border: 1px solid #ccc; border-radius: 8px;"
-        title="Mô phỏng 8051"
+        title="Mô phỏng QUEUE RTOS"
         scrolling="no"
     >
     </iframe>
