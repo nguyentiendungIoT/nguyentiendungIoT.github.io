@@ -21,7 +21,7 @@ int main() {
 }
 ```
 
-## Mô phỏng TASK QUEUE RTOS Interactive
+## Mô phỏng TASK QUEUE RTOS Interactiv
 
 Dưới đây là mô phỏng tương tác của 2 task khi truy cập queue, bạn có thể test code trực tiếp:
 
