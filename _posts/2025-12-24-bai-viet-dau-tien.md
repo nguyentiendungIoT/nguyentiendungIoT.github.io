@@ -29,7 +29,7 @@ Dưới đây là mô phỏng tương tác của 2 task khi truy cập queue, b�
     <iframe
         src="/assets/sims/mo_phong_stm32_queue.html"
         width="100%"
-        height="900px"
+        height="1200px"
         style="border: 1px solid #ccc; border-radius: 8px;"
         title="Mô phỏng QUEUE RTOS"
         scrolling="no"
