@@ -26,5 +26,5 @@ Tôi xây dựng blog này để chia sẻ hành trình "đào sâu" vào thế 
 ### 📫 Liên hệ
 
 Nếu bạn muốn trao đổi về kỹ thuật hoặc cơ hội hợp tác, hãy kết nối với tôi qua:
-* Email: [email_cua_ban@gmail.com](mailto:email_cua_ban@gmail.com)
-* LinkedIn: [Link Profile LinkedIn của bạn](#)
+* Email: [nguyentiendungiot@gmail.com](mailto:nguyentiendungiot@gmail.com)
+* LinkedIn: [https://www.linkedin.com/in/nguy%E1%BB%85n-ti%E1%BA%BFn-d%C5%A9ng-3958442a1/](#)
