@@ -25,7 +25,7 @@ int main() {
 
 Dưới đây là mô phỏng tương tác của 2 task khi truy cập queue, bạn có thể test code trực tiếp:
 
-<div style="width: 100%; margin: 20px 0;">
+<div style="width: 100vw; margin: 20px calc(-50vw + 50%); position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
     <iframe
         src="/assets/sims/mo_phong_stm32_queue.html"
         width="100%"
