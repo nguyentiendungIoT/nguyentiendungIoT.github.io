@@ -1,5 +1,5 @@
 ---
-title: "Mảnh ghép 6: Đường ống vạn năng" (Queue — Universal Primitive trong FreeRTOS)
+title: 'Mảnh ghép 6: Đường ống vạn năng (Queue — Universal Primitive trong FreeRTOS)'
 date: 2025-12-26 10:00:00 +0700
 categories: [FreeRTOS, RTOS]
 tags: [freertos, queue, semaphore, mutex, synchronization, kernel]
