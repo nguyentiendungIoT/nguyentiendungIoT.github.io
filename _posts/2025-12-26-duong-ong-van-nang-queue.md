@@ -1,5 +1,5 @@
 ---
-title: Mảnh ghép 6: Đường ống vạn năng (Queue — Universal Primitive trong FreeRTOS)
+title: Bài 6 RTOS: Queue, Mutex, Semaphore (Đường ống vạn năng)
 date: 2025-12-26 10:00:00 +0700
 categories: [FreeRTOS, RTOS]
 tags: [freertos, queue, semaphore, mutex, synchronization, kernel]
@@ -25,11 +25,12 @@ Bài này mình viết theo hướng **first-principles**: bắt đầu từ “
 
 Trong RTOS, dù tên gọi có hoành tráng đến đâu, đa phần cơ chế đồng bộ đều quay về 2 nhu cầu nền tảng:
 
-1) **Truyền trạng thái** giữa các task
+1. **Truyền trạng thái** giữa các task
    - Có/không có dữ liệu
    - Có/không có “token”
    - Ai đang sở hữu tài nguyên
-2) **Điều phối thời gian chạy**
+
+2. **Điều phối thời gian chạy**
    - Task nào phải chờ (block)
    - Khi nào được đánh thức (unblock)
    - Ai được chạy trước (phụ thuộc scheduler + priority)
@@ -169,10 +170,10 @@ Phần “băng chuyền vòng tròn” thường nằm trong `prvCopyDataToQueu
   <iframe
     src="/assets/sims/freertos_queue_visualizer.html"
     width="100%"
-    height="1000px"
+    height="1600px"
     style="border: 1px solid #ccc; border-radius: 8px;"
     title="Mô phỏng FreeRTOS Queue"
-    scrolling="no"
+    scrolling="yes"
   >
   </iframe>
 </div>
@@ -215,10 +216,10 @@ Counting semaphore có thể hiểu cực gọn:
   <iframe
     src="/assets/sims/freertos_semaphore_debugger%20-%20Copy.html"
     width="100%"
-    height="1000px"
+    height="1600px"
     style="border: 1px solid #ccc; border-radius: 8px;"
     title="Mô phỏng FreeRTOS Semaphore"
-    scrolling="no"
+    scrolling="yes"
   >
   </iframe>
 </div>
@@ -270,10 +271,10 @@ Khi mutex được give, nó vẫn “đi qua” đường send/return token (t�
   <iframe
     src="/assets/sims/freertos-mutex-visualizer.html"
     width="100%"
-    height="1000px"
+    height="1600px"
     style="border: 1px solid #ccc; border-radius: 8px;"
     title="Mô phỏng FreeRTOS Mutex"
-    scrolling="no"
+    scrolling="yes"
   >
   </iframe>
 </div>
