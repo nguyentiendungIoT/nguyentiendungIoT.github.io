@@ -40,9 +40,9 @@ social:
   name: Nguyễn Tiến Dũng
   email: nguyentiendungiot@gmail.com                       # Điền email nếu muốn hiện
   links:
-     https://github.com/nguyentiendungIoT
+    - https://github.com/nguyentiendungIoT
     # - https://twitter.com/username
-     https://www.linkedin.com/in/nguyễn-tiến-dũng-embedded-automotive
+    - https://www.linkedin.com/in/nguyễn-tiến-dũng-embedded-automotive
 
 # Site Verification Settings
 webmaster_verifications:
