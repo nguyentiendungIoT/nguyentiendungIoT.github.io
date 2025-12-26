@@ -1,11 +1,13 @@
 ---
-title: Bài 6 RTOS: Queue, Mutex, Semaphore (Đường ống vạn năng)
+title: Bài 6 - RTOS Queue, Mutex, Semaphore (Đường ống vạn năng)
 date: 2025-12-26 10:00:00 +0700
 categories: [FreeRTOS, RTOS]
 tags: [freertos, queue, semaphore, mutex, synchronization, kernel]
 ---
 
 Bài này **tập trung vào phân tích mã nguồn kernel** để hiểu **cấu tạo và cơ chế hoạt động** của các primitive đồng bộ trong FreeRTOS: **queue, semaphore, mutex**.
+
+> Lưu ý: Nên tải mã nguồn FreeRTOS-Kernel về để vừa đọc vừa đối chiếu, và mở các mô phỏng trên màn hình rộng (desktop) để trực quan hơn.
 
 - Mục tiêu là trả lời câu hỏi: *nó hoạt động như thế nào ở tầng kernel?* (block/unblock, danh sách chờ, ownership, priority inheritance…)
 - Bài này **không** đi theo hướng “học cách sử dụng API” (how-to dùng `xQueueSend`, `xSemaphoreTake`, …).
@@ -166,9 +168,11 @@ Phần “băng chuyền vòng tròn” thường nằm trong `prvCopyDataToQueu
 
 ### 4.4) Mô phỏng: Queue (interactive)
 
+> **Lưu ý:** Để xem toàn bộ mô phỏng rõ ràng nhất, hãy [**mở trong tab mới**](/assets/sims/freertos_queue_sim.html){:target="_blank"} hoặc tải về để xem trên màn hình rộng (desktop).
+
 <div style="width: 100%; margin: 20px 0;">
   <iframe
-    src="/assets/sims/freertos_queue_visualizer.html"
+    src="/assets/sims/freertos_queue_sim.html"
     width="100%"
     height="1600px"
     style="border: 1px solid #ccc; border-radius: 8px;"
@@ -211,6 +215,8 @@ Counting semaphore có thể hiểu cực gọn:
 - current count = `uxMessagesWaiting`
 
 ### 5.2) Mô phỏng: Semaphore (interactive)
+
+> **Lưu ý:** Để xem toàn bộ mô phỏng rõ ràng nhất, hãy [**mở trong tab mới**](/assets/sims/freertos_semaphore_debugger%20-%20Copy.html){:target="_blank"} hoặc tải về để xem trên màn hình rộng (desktop).
 
 <div style="width: 100%; margin: 20px 0;">
   <iframe
@@ -266,6 +272,8 @@ Khi mutex được give, nó vẫn “đi qua” đường send/return token (t�
 - reset `xMutexHolder`
 
 ### 6.4) Mô phỏng: Mutex (interactive)
+
+> **Lưu ý:** Để xem toàn bộ mô phỏng rõ ràng nhất, hãy [**mở trong tab mới**](/assets/sims/freertos-mutex-visualizer.html){:target="_blank"} hoặc tải về để xem trên màn hình rộng (desktop).
 
 <div style="width: 100%; margin: 20px 0;">
   <iframe
