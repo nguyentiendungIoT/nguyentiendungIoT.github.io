@@ -1,5 +1,5 @@
 ---
-title: Bài 6 RTOS: Queue, Mutex, Semaphore (Đường ống vạn năng)
+title: Bài 6 RTOS Queue, Mutex, Semaphore (Đường ống vạn năng)
 date: 2025-12-26 10:00:00 +0700
 categories: [FreeRTOS, RTOS]
 tags: [freertos, queue, semaphore, mutex, synchronization, kernel]
