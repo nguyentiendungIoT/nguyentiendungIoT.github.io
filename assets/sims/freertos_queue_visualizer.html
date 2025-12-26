@@ -1,0 +1,587 @@
+<html lang="vi"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function q(b){var c=0;return function(){return c<b.length?{done:!1,value:b[c++]}:{done:!0}}}function t(b){var c=typeof Symbol!="undefined"&&Symbol.iterator&&b[Symbol.iterator];if(c)return c.call(b);if(typeof b.length=="number")return{next:q(b)};throw Error(String(b)+" is not an iterable or ArrayLike");}var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,c,g){if(b==Array.prototype||b==Object.prototype)return b;b[c]=g.value;return b};
+function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<b.length;++c){var g=b[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var w=v(this);function x(b,c){if(c)a:{var g=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var l=b[h];if(!(l in g))break a;g=g[l]}b=b[b.length-1];h=g[b];c=c(h);c!=h&&c!=null&&u(g,b,{configurable:!0,writable:!0,value:c})}}
+function y(){this.j=!1;this.g=null;this.u=void 0;this.h=1;this.v=this.l=0;this.i=null}function z(b){if(b.j)throw new TypeError("Generator is already running");b.j=!0}y.prototype.o=function(b){this.u=b};function A(b,c){b.i={I:c,J:!0};b.h=b.l||b.v}y.prototype.return=function(b){this.i={return:b};this.h=this.v};function B(b){this.g=new y;this.h=b}function E(b,c){z(b.g);var g=b.g.g;if(g)return F(b,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,b.g.return);b.g.return(c);return G(b)}
+function F(b,c,g,h){try{var l=c.call(b.g.g,g);if(!(l instanceof Object))throw new TypeError("Iterator result "+l+" is not an object");if(!l.done)return b.g.j=!1,l;var m=l.value}catch(f){return b.g.g=null,A(b.g,f),G(b)}b.g.g=null;h.call(b.g,m);return G(b)}function G(b){for(;b.g.h;)try{var c=b.h(b.g);if(c)return b.g.j=!1,{value:c.value,done:!1}}catch(g){b.g.u=void 0,A(b.g,g)}b.g.j=!1;if(b.g.i){c=b.g.i;b.g.i=null;if(c.J)throw c.I;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function H(b){this.next=function(c){z(b.g);b.g.g?c=F(b,b.g.g.next,c,b.g.o):(b.g.o(c),c=G(b));return c};this.throw=function(c){z(b.g);b.g.g?c=F(b,b.g.g["throw"],c,b.g.o):(A(b.g,c),c=G(b));return c};this.return=function(c){return E(b,c)};this[Symbol.iterator]=function(){return this}}function I(b){function c(h){return b.next(h)}function g(h){return b.throw(h)}return new Promise(function(h,l){function m(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(m,l)}m(b.next())})}
+x("Symbol",function(b){function c(m){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(m||"")+"_"+l++,m)}function g(m,f){this.g=m;u(this,"description",{configurable:!0,writable:!0,value:f})}if(b)return b;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",l=0;return c});
+x("Symbol.iterator",function(b){if(b)return b;b=Symbol("Symbol.iterator");u(Array.prototype,b,{configurable:!0,writable:!0,value:function(){return J(q(this))}});return b});function J(b){b={next:b};b[Symbol.iterator]=function(){return this};return b}
+x("Promise",function(b){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var a=this.j();try{f(a.resolve,a.reject)}catch(d){a.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(a){a(f)})}if(b)return b;g.prototype.h=function(f){if(this.g==null){this.g=[];var a=this;this.i(function(){a.l()})}this.g.push(f)};var l=w.setTimeout;g.prototype.i=function(f){l(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var a=0;a<f.length;++a){var d=
+f[a];f[a]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(a,k))}}var a=this,d=!1;return{resolve:f(this.D),reject:f(this.l)}};c.prototype.D=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.G(f);else{a:switch(typeof f){case "object":var a=f!=null;break a;case "function":a=!0;break a;default:a=!1}a?this.C(f):this.o(f)}};
+c.prototype.C=function(f){var a=void 0;try{a=f.then}catch(d){this.l(d);return}typeof a=="function"?this.H(a,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,a){if(this.h!=0)throw Error("Cannot settle("+f+", "+a+"): Promise already settled in state"+this.h);this.h=f;this.i=a;this.h===2&&this.F();this.K()};c.prototype.F=function(){var f=this;l(function(){if(f.B()){var a=w.console;typeof a!=="undefined"&&a.error(f.i)}},1)};c.prototype.B=
+function(){if(this.u)return!1;var f=w.CustomEvent,a=w.Event,d=w.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof a==="function"?f=new a("unhandledrejection",{cancelable:!0}):(f=w.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.K=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)m.h(this.g[f]);this.g=null}};var m=new g;c.prototype.G=
+function(f){var a=this.j();f.A(a.resolve,a.reject)};c.prototype.H=function(f,a){var d=this.j();try{f.call(a,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,a){function d(n,r){return typeof n=="function"?function(C){try{e(n(C))}catch(D){k(D)}}:r}var e,k,p=new c(function(n,r){e=n;k=r});this.A(d(f,e),d(a,k));return p};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.A=function(f,a){function d(){switch(e.h){case 1:f(e.i);break;case 2:a(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?m.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(a,d){d(f)})};c.race=function(f){return new c(function(a,d){for(var e=t(f),k=e.next();!k.done;k=e.next())h(k.value).A(a,d)})};c.all=function(f){var a=t(f),d=a.next();return d.done?h([]):new c(function(e,k){function p(C){return function(D){n[C]=D;r--;r==0&&e(n)}}var n=[],r=0;do n.push(void 0),r++,h(d.value).A(p(n.length-1),k),d=a.next();while(!d.done)})};return c});
+function K(b,c){return Object.prototype.hasOwnProperty.call(b,c)}x("Object.is",function(b){return b?b:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(b){return b?b:function(c,g){var h=this;h instanceof String&&(h=String(h));var l=h.length;g=g||0;for(g<0&&(g=Math.max(g+l,0));g<l;g++){var m=h[g];if(m===c||Object.is(m,c))return!0}return!1}});
+x("String.prototype.includes",function(b){return b?b:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(b){function c(d){this.g=(a+=Math.random()+1).toString();if(d){d=t(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function l(d){if(!K(d,f)){var e=new g;u(d,f,{value:e})}}function m(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&l(k);return e(k)})}if(function(){if(!b||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new b([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(p){return!1}}())return b;var f="$jscomp_hidden_"+Math.random();m("freeze");m("preventExtensions");m("seal");var a=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");l(d);if(!K(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&K(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&K(d,
+f)&&K(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&K(d,f)&&K(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(b){function c(){var a={};return a.m=a.next=a.head=a}function g(a,d){var e=a[1];return J(function(){if(e){for(;e.head!=a[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(a,d){var e=d&&typeof d;e=="object"||e=="function"?m.has(d)?e=m.get(d):(e=""+ ++f,m.set(d,e)):e="p_"+d;var k=a[0][e];if(k&&K(a[0],e))for(a=0;a<k.length;a++){var p=k[a];if(d!==d&&p.key!==p.key||d===p.key)return{id:e,list:k,index:a,entry:p}}return{id:e,
+list:k,index:-1,entry:void 0}}function l(a){this[0]={};this[1]=c();this.size=0;if(a){a=t(a);for(var d;!(d=a.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var a=Object.seal({x:4}),d=new b(t([[a,"s"]]));if(d.get(a)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=a||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(p){return!1}}())return b;var m=new WeakMap;l.prototype.set=function(a,d){a=a===0?0:a;var e=h(this,a);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:a,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};l.prototype.delete=function(a){a=h(this,a);return a.entry&&a.list?(a.list.splice(a.index,1),a.list.length||delete this[0][a.id],a.entry.m.next=a.entry.next,
+a.entry.next.m=a.entry.m,a.entry.head=null,this.size--,!0):!1};l.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};l.prototype.has=function(a){return!!h(this,a).entry};l.prototype.get=function(a){return(a=h(this,a).entry)&&a.value};l.prototype.entries=function(){return g(this,function(a){return[a.key,a.value]})};l.prototype.keys=function(){return g(this,function(a){return a.key})};l.prototype.values=function(){return g(this,function(a){return a.value})};l.prototype.forEach=
+function(a,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,a.call(d,k[1],k[0],this)};l.prototype[Symbol.iterator]=l.prototype.entries;var f=0;return l});
+x("Set",function(b){function c(g){this.g=new Map;if(g){g=t(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!b||typeof b!="function"||!b.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new b(t([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var l=h.entries(),m=l.next();if(m.done||m.value[0]!=g||m.value[1]!=g)return!1;m=l.next();return m.done||m.value[0]==g||m.value[0].x!=4||
+m.value[1]!=m.value[0]?!1:l.next().done}catch(f){return!1}}())return b;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var l=this;this.g.forEach(function(m){return g.call(h,m,m,l)})};return c});(function(){function b(){return m?Promise.resolve(m):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(a){if(!a.ok)throw Error("HTTP error! status: "+a.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return a.json()}).then(function(a){if(!Array.isArray(a))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return m=a}).catch(function(a){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",a);f=null;throw a;})}function c(a){var d,e,k,p;return I(new H(new B(function(n){switch(n.h){case 1:d=(a.textContent||"").trim();if(!d||a.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return n.return();e=window.getComputedStyle(a);if(e.display==="none"||e.visibility==="hidden")return n.return();
+n.l=2;var r=b();n.h=4;return{value:r};case 4:k=n.u;n.h=3;n.l=0;break;case 2:return n.l=0,n.i=null,console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),n.return();case 3:(p=k.includes(d))?a.classList.contains("js-replaced-missing-icon")&&a.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&a.classList.contains("js-replaced-missing-icon")||(a.textContent="radio_button_unchecked",a.classList.add("js-replaced-missing-icon")),n.h=0}})))}
+function g(a){a=a===void 0?document.body:a;a.querySelectorAll(l).forEach(function(d){c(d)})}function h(){b().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(a){var d=new Set;a=t(a);for(var e=a.next();!e.done;e=a.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(p){p.nodeType===Node.ELEMENT_NODE&&(p.matches(l)&&d.add(p),p.querySelectorAll(l).forEach(function(n){d.add(n)}))});else if(e.type===
+"attributes"&&e.attributeName==="class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(l)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(l)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(p){c(p)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(a){console.error("IconChecker: Font loading error. Scanning icons anyway.",
+a);requestAnimationFrame(function(){g(document.body)})})}var l=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(a){return"."+a}).join(","),m=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Phẫu FreeRTOS Queue_t</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'Roboto Mono', monospace; }
+        .pointer-arrow {
+            transition: all 0.5s ease-in-out;
+        }
+        .cell-enter {
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .highlight-flash {
+            animation: flash 1s;
+        }
+        @keyframes flash {
+            0% { background-color: #fde047; } /* yellow-300 */
+            100% { background-color: transparent; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.bottom-0{bottom:0px}.left-1{left:0.25rem}.right-0{right:0px}.right-4{right:1rem}.top-0{top:0px}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.-mb-8{margin-bottom:-2rem}.-mt-20{margin-top:-5rem}.-mt-8{margin-top:-2rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-2\.5{height:0.625rem}.h-32{height:8rem}.h-80{height:20rem}.min-h-\[100px\]{min-height:100px}.w-12{width:3rem}.w-14{width:3.5rem}.w-20{width:5rem}.w-40{width:10rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-none{max-width:none}.flex-1{flex:1 1 0%}.cursor-help{cursor:help}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-bl-xl{border-bottom-left-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-blue-500{--tw-border-opacity:1;border-color:rgb(59 130 246 / var(--tw-border-opacity, 1))}.border-cyan-500{--tw-border-opacity:1;border-color:rgb(6 182 212 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-orange-500{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.border-yellow-500{--tw-border-opacity:1;border-color:rgb(234 179 8 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-blue-900{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-indigo-800{--tw-bg-opacity:1;background-color:rgb(55 48 163 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pb-1{padding-bottom:0.25rem}.text-center{text-align:center}.align-middle{vertical-align:middle}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[8px\]{font-size:8px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.normal-case{text-transform:none}.leading-relaxed{line-height:1.625}.text-blue-200{--tw-text-opacity:1;color:rgb(191 219 254 / var(--tw-text-opacity, 1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-cyan-300{--tw-text-opacity:1;color:rgb(103 232 249 / var(--tw-text-opacity, 1))}.text-cyan-900{--tw-text-opacity:1;color:rgb(22 78 99 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-orange-300{--tw-text-opacity:1;color:rgb(253 186 116 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-orange-900{--tw-text-opacity:1;color:rgb(124 45 18 / var(--tw-text-opacity, 1))}.text-pink-300{--tw-text-opacity:1;color:rgb(249 168 212 / var(--tw-text-opacity, 1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-slate-100{--tw-text-opacity:1;color:rgb(241 245 249 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-300{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.text-yellow-900{--tw-text-opacity:1;color:rgb(113 63 18 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.opacity-50{opacity:0.5}.opacity-70{opacity:0.7}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-green-600:hover{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:block{display:block}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation / Header -->
+    <header class="bg-blue-900 text-white p-6 shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold flex items-center gap-2">
+                    <span class="material-symbols-outlined">memory</span>
+                    FreeRTOS Queue Internals
+                </h1>
+                <p class="text-blue-200 text-sm mt-1">Mô phỏng cấu trúc <code>Queue_t</code> trong <code>queue.c</code></p>
+            </div>
+            <button onclick="downloadPage()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 transition shadow-md">
+                <span class="material-symbols-outlined">download</span>
+                Tải Mã Nguồn
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 space-y-12">
+
+        <!-- Intro Section -->
+        <section class="prose max-w-none">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <h2 class="text-xl font-bold text-blue-900 mb-4">Tổng quan về `Queue_t`</h2>
+                <p class="text-slate-600">
+                    Trong FreeRTOS, <code>Queue_t</code> là cấu trúc dữ liệu cốt lõi không chỉ dùng cho việc gửi nhận dữ liệu mà còn là nền tảng cho Semaphores và Mutexes.
+                    Dưới đây là mô hình phân rã chi tiết từng thành phần.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Cấu trúc bộ nhớ & Union -->
+        <section id="structure-breakdown" class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left: Code Visualization -->
+            <div class="bg-slate-900 text-slate-100 p-6 rounded-xl shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-2 bg-slate-800 rounded-bl-xl text-xs text-slate-400">queue.c</div>
+                <h3 class="text-lg font-bold text-green-400 mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined">code</span>
+                    Cấu trúc Struct (Rút gọn)
+                </h3>
+                
+                <div class="code-font text-sm leading-relaxed">
+                    <span class="text-purple-400">typedef struct</span> QueueDefinition {<br>
+                    &nbsp;&nbsp;<span class="text-slate-500">// 2.1: Con trỏ vùng nhớ (Ring Buffer)</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-300" id="code-pcHead">int8_t *pcHead;</span><br>
+                    &nbsp;&nbsp;<span class="text-blue-300" id="code-pcWriteTo">int8_t *pcWriteTo;</span><br>
+                    <br>
+                    &nbsp;&nbsp;<span class="text-slate-500">// 2.5: Union - Bí mật Semaphore</span><br>
+                    &nbsp;&nbsp;<span class="text-purple-400">union</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-yellow-300" id="code-xQueue">QueuePointers_t xQueue;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-pink-300 opacity-50" id="code-xSemaphore">SemaphoreData_t xSemaphore;</span><br>
+                    &nbsp;&nbsp;} u;<br>
+                    <br>
+                    &nbsp;&nbsp;<span class="text-slate-500">// 2.2: Danh sách chờ (List)</span><br>
+                    &nbsp;&nbsp;<span class="text-orange-300" id="code-waitingToSend">List_t xTasksWaitingToSend;</span><br>
+                    &nbsp;&nbsp;<span class="text-orange-300" id="code-waitingToReceive">List_t xTasksWaitingToReceive;</span><br>
+                    <br>
+                    &nbsp;&nbsp;<span class="text-slate-500">// 2.3: Trạng thái</span><br>
+                    &nbsp;&nbsp;<span class="text-cyan-300" id="code-counters">volatile UBaseType_t uxMessagesWaiting;</span><br>
+                    &nbsp;&nbsp;<span class="text-cyan-300">UBaseType_t uxLength;</span><br>
+                    &nbsp;&nbsp;<span class="text-cyan-300">UBaseType_t uxItemSize;</span><br>
+                    } Queue_t;
+                </div>
+
+                <!-- Union Toggle -->
+                <div class="mt-6 p-4 bg-slate-800 rounded-lg border border-slate-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold">Chế độ xem Union:</span>
+                        <div class="flex bg-slate-700 rounded p-1">
+                            <button id="btn-queue-mode" class="px-3 py-1 bg-blue-600 rounded text-xs font-bold transition" onclick="setUnionMode('queue')">Queue Data</button>
+                            <button id="btn-mutex-mode" class="px-3 py-1 text-slate-400 rounded text-xs font-bold transition hover:text-white" onclick="setUnionMode('mutex')">Semaphore/Mutex</button>
+                        </div>
+                    </div>
+                    <p id="union-desc" class="text-xs text-slate-400 mt-2">
+                        Trong chế độ Queue: <code>u.xQueue</code> chứa <code>pcTail</code> và <code>pcReadFrom</code> để quản lý bộ đệm vòng.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Component Diagram -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-center">
+                <h3 class="text-lg font-bold text-blue-900 mb-4">Sơ đồ bộ nhớ logic</h3>
+                
+                <!-- Diagram Container -->
+                <div class="relative w-full h-80 bg-slate-100 rounded-xl border border-slate-300 p-4 flex flex-col items-center justify-center gap-6">
+                    
+                    <!-- Head/Tail markers -->
+                    <div class="w-full flex justify-between px-8 text-xs font-bold text-slate-500">
+                        <div class="text-center group cursor-help">
+                            <span class="material-symbols-outlined text-blue-600">start</span><br>pcHead
+                            <div class="absolute hidden group-hover:block bg-black text-white p-2 rounded text-xs w-40 z-10 -mt-20">Đầu vùng nhớ cấp phát.</div>
+                        </div>
+                        <div class="text-center group cursor-help">
+                            <span class="material-symbols-outlined text-red-600">last_page</span><br>pcTail (Marker)
+                            <div class="absolute hidden group-hover:block bg-black text-white p-2 rounded text-xs w-40 z-10 -mt-20 right-4">Điểm cuối vùng nhớ. Khi write chạm đây, nó quay về Head.</div>
+                        </div>
+                    </div>
+
+                    <!-- Memory Strip -->
+                    <div class="flex gap-1">
+                        <div class="w-12 h-12 border-2 border-slate-300 bg-white flex items-center justify-center font-bold text-slate-300 rounded shadow-inner">0</div>
+                        <div class="w-12 h-12 border-2 border-slate-300 bg-white flex items-center justify-center font-bold text-slate-300 rounded shadow-inner">1</div>
+                        <div class="w-12 h-12 border-2 border-slate-300 bg-white flex items-center justify-center font-bold text-slate-300 rounded shadow-inner">2</div>
+                        <div class="w-12 h-12 border-2 border-slate-300 bg-white flex items-center justify-center font-bold text-slate-300 rounded shadow-inner">3</div>
+                        <div class="w-12 h-12 border-2 border-slate-300 bg-white flex items-center justify-center font-bold text-slate-300 rounded shadow-inner">4</div>
+                    </div>
+
+                    <!-- Explanation Box -->
+                    <div class="bg-blue-50 p-3 rounded-lg text-sm text-blue-800 border border-blue-200 w-full">
+                        <strong class="block mb-1 text-blue-900"><span class="material-symbols-outlined text-sm align-middle">info</span> Cơ chế:</strong>
+                        Đây là một <strong>Buffer liên tục</strong> trong RAM. FreeRTOS dùng các con trỏ logic để biến nó thành một vòng tròn (Circular Buffer).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: INTERACTIVE SIMULATION -->
+        <section class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div class="bg-indigo-600 p-4 text-white flex justify-between items-center">
+                <h2 class="text-lg font-bold flex items-center gap-2">
+                    <span class="material-symbols-outlined">play_circle</span>
+                    Mô phỏng Hoạt động (Queue 5 items)
+                </h2>
+                <div class="flex gap-2">
+                     <span class="bg-indigo-800 px-3 py-1 rounded text-xs">Size: 5</span>
+                     <span class="bg-indigo-800 px-3 py-1 rounded text-xs">Item Size: int</span>
+                </div>
+            </div>
+
+            <div class="p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Controls -->
+                <div class="space-y-6">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase">Hành động User / ISR</h4>
+                        <div class="flex gap-2 mb-4">
+                            <input type="number" id="input-val" value="10" class="border border-slate-300 rounded px-2 py-1 w-20 text-center" placeholder="Val">
+                            <button onclick="simWrite()" class="flex-1 bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded shadow transition flex justify-center items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">input</span> xQueueSend
+                            </button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="simRead()" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded shadow transition flex justify-center items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">output</span> xQueueReceive
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">
+                            *Thử Send khi đầy hoặc Receive khi rỗng để xem Blocking Lists.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <h4 class="font-bold text-slate-700 mb-2 text-sm uppercase">2.3 Trạng thái (Counters)</h4>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm">uxMessagesWaiting:</span>
+                            <span id="stat-waiting" class="font-mono font-bold text-lg text-blue-600">0</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5">
+                            <div id="stat-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-500 mt-1">
+                            <span>Empty</span>
+                            <span>Full (5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Area -->
+                <div class="lg:col-span-2 flex flex-col items-center">
+                    
+                    <!-- Copy By Value Animation Zone -->
+                    <div class="h-16 w-full flex justify-center items-center relative mb-4">
+                        <div id="copy-anim-container" class="opacity-0 absolute transition-all duration-500 bg-yellow-100 border border-yellow-400 text-yellow-800 px-3 py-1 rounded shadow-lg text-sm font-bold flex items-center gap-2 z-20">
+                            <span class="material-symbols-outlined text-sm">content_copy</span>
+                            memcpy(&amp;queue, &amp;val, size)
+                        </div>
+                    </div>
+
+                    <!-- RING BUFFER VISUALIZER -->
+                    <div class="relative w-full max-w-lg h-32 bg-slate-100 rounded-xl border-2 border-slate-300 flex items-center justify-around px-2 shadow-inner">
+                        
+                        <!-- Pointers (Absolute positioning updated by JS) -->
+                        <div id="ptr-write" class="pointer-arrow absolute top-0 -mt-8 flex flex-col items-center z-10 text-green-700 font-bold text-xs" style="transform: translateX(-27.5px);">
+                            <span>pcWriteTo</span>
+                            <span class="material-symbols-outlined text-2xl">arrow_downward</span>
+                        </div>
+
+                        <div id="ptr-read" class="pointer-arrow absolute bottom-0 -mb-8 flex flex-col-reverse items-center z-10 text-red-700 font-bold text-xs" style="transform: translateX(381px);">
+                            <span>pcReadFrom</span>
+                            <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+                        </div>
+
+                        <!-- Slots -->
+                        <!-- Creating 5 slots dynamically in JS would be better, but hardcoding for clarity here since length is fixed 5 -->
+                        <div class="slot w-14 h-14 bg-white border-2 border-slate-300 rounded flex items-center justify-center font-bold text-slate-400 relative" id="slot-0"><span class="val"></span><span class="idx absolute top-0 left-1 text-[8px] text-slate-400">0</span></div>
+                        <div class="slot w-14 h-14 bg-white border-2 border-slate-300 rounded flex items-center justify-center font-bold text-slate-400 relative" id="slot-1"><span class="val"></span><span class="idx absolute top-0 left-1 text-[8px] text-slate-400">1</span></div>
+                        <div class="slot w-14 h-14 bg-white border-2 border-slate-300 rounded flex items-center justify-center font-bold text-slate-400 relative" id="slot-2"><span class="val"></span><span class="idx absolute top-0 left-1 text-[8px] text-slate-400">2</span></div>
+                        <div class="slot w-14 h-14 bg-white border-2 border-slate-300 rounded flex items-center justify-center font-bold text-slate-400 relative" id="slot-3"><span class="val"></span><span class="idx absolute top-0 left-1 text-[8px] text-slate-400">3</span></div>
+                        <div class="slot w-14 h-14 bg-white border-2 border-slate-300 rounded flex items-center justify-center font-bold text-slate-400 relative" id="slot-4"><span class="val"></span><span class="idx absolute top-0 left-1 text-[8px] text-slate-400">4</span></div>
+                    </div>
+
+                    <!-- Task Lists (2.2) -->
+                    <div class="grid grid-cols-2 gap-4 w-full mt-12">
+                        <!-- Waiting to Send -->
+                        <div class="bg-orange-50 rounded border border-orange-200 p-3 min-h-[100px] flex flex-col">
+                            <h5 class="text-xs font-bold text-orange-800 uppercase mb-2 border-b border-orange-200 pb-1">
+                                xTasksWaitingToSend
+                                <span class="block font-normal text-[10px] normal-case opacity-70">(Full -&gt; Blocked Tasks)</span>
+                            </h5>
+                            <div id="list-send" class="flex flex-wrap gap-2 text-xs"></div>
+                        </div>
+
+                        <!-- Waiting to Receive -->
+                        <div class="bg-purple-50 rounded border border-purple-200 p-3 min-h-[100px] flex flex-col">
+                            <h5 class="text-xs font-bold text-purple-800 uppercase mb-2 border-b border-purple-200 pb-1">
+                                xTasksWaitingToReceive
+                                <span class="block font-normal text-[10px] normal-case opacity-70">(Empty -&gt; Blocked Tasks)</span>
+                            </h5>
+                            <div id="list-receive" class="flex flex-wrap gap-2 text-xs"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Logger -->
+            <div class="bg-slate-900 text-green-400 font-mono text-xs p-4 h-32 overflow-y-auto border-t border-slate-700" id="console-log">
+                <div>&gt; System Initialized. Queue created (Length: 5).</div>
+            </div>
+        </section>
+
+        <!-- Detailed Breakdown Steps -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow border-l-4 border-blue-500">
+                <h3 class="font-bold text-blue-900 mb-2">2.1 Ring Buffer</h3>
+                <p class="text-sm text-slate-600">Khi <code>pcWriteTo</code> chạm đáy (index 4), lệnh ghi tiếp theo sẽ đưa nó về <code>pcHead</code> (index 0). Dữ liệu cũ bị ghi đè nếu không có cơ chế chặn.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow border-l-4 border-orange-500">
+                <h3 class="font-bold text-orange-900 mb-2">2.2 Event Lists</h3>
+                <p class="text-sm text-slate-600">Task bị block không tiêu tốn CPU. Chúng nằm trong danh sách chờ. Khi Queue có thay đổi (có chỗ trống/có data), FreeRTOS đánh thức Task ưu tiên cao nhất.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow border-l-4 border-cyan-500">
+                <h3 class="font-bold text-cyan-900 mb-2">2.3 Counters</h3>
+                <p class="text-sm text-slate-600"><code>uxMessagesWaiting</code> tăng khi ghi, giảm khi đọc. Đây là biến cốt lõi để xác định Queue Full hay Empty nhanh chóng.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow border-l-4 border-yellow-500">
+                <h3 class="font-bold text-yellow-900 mb-2">2.4 Copy-by-Value</h3>
+                <p class="text-sm text-slate-600">FreeRTOS dùng <code>memcpy</code>. Nếu bạn gửi một biến lớn, nó chép toàn bộ biến. Để hiệu quả, hãy gửi <strong>con trỏ</strong> (4 bytes) trỏ tới dữ liệu lớn.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- QUEUE LOGIC & STATE ---
+        const QUEUE_LENGTH = 5;
+        let queueStorage = new Array(QUEUE_LENGTH).fill(null);
+        
+        // Pointers logic similar to FreeRTOS
+        // Note: FreeRTOS implementation details:
+        // pcWriteTo points to the next free slot.
+        // pcReadFrom points to the last read slot (logic reads from pcReadFrom->next).
+        // For simplification in visualization, we will map indexes 0-4 directy.
+        
+        let writeIdx = 0; 
+        let readIdx = QUEUE_LENGTH - 1; // Initial state in FreeRTOS often starts behind
+        
+        let messagesWaiting = 0;
+        let tasksWaitingToSend = 0;   // Count of blocked tasks
+        let tasksWaitingToReceive = 0; // Count of blocked tasks
+
+        // --- UI UPDATERS ---
+
+        function log(msg) {
+            const el = document.getElementById('console-log');
+            const line = document.createElement('div');
+            line.textContent = `> ${msg}`;
+            el.appendChild(line);
+            el.scrollTop = el.scrollHeight;
+        }
+
+        function updateVisuals() {
+            // Update Slots
+            for(let i=0; i<QUEUE_LENGTH; i++) {
+                const slot = document.getElementById(`slot-${i}`);
+                const valSpan = slot.querySelector('.val');
+                if (queueStorage[i] !== null) {
+                    valSpan.textContent = queueStorage[i];
+                    slot.classList.remove('bg-white', 'border-slate-300');
+                    slot.classList.add('bg-blue-100', 'border-blue-500', 'text-blue-900');
+                } else {
+                    valSpan.textContent = '';
+                    slot.classList.add('bg-white', 'border-slate-300');
+                    slot.classList.remove('bg-blue-100', 'border-blue-500', 'text-blue-900');
+                }
+            }
+
+            // Update Pointers positions
+            // We assume the visual slots are distributed evenly in the container
+            const containerWidth = document.querySelector('.relative.w-full.max-w-lg').offsetWidth;
+            const slotWidth = containerWidth / QUEUE_LENGTH; // Rough estimation for centering
+            
+            // Refine calculation based on actual slot elements
+            const firstSlot = document.getElementById('slot-0');
+            const slotOffset = firstSlot.offsetLeft;
+            const slotW = firstSlot.offsetWidth;
+            const gap = (containerWidth - (slotW * QUEUE_LENGTH)) / (QUEUE_LENGTH * 2); // approximate centering
+
+            // Helper to place arrow
+            const movePtr = (id, idx) => {
+                const el = document.getElementById(id);
+                // Calculate position relative to the container
+                // Basic math: Slot index * (slot width + margin) + initial padding
+                // Let's use the actual element position
+                const targetSlot = document.getElementById(`slot-${idx}`);
+                const leftPos = targetSlot.offsetLeft + (targetSlot.offsetWidth / 2) - (el.offsetWidth / 2);
+                el.style.transform = `translateX(${leftPos}px)`;
+            };
+
+            movePtr('ptr-write', writeIdx);
+            
+            // Visual quirk: In logic pcReadFrom points to last read. 
+            // The NEXT read happens at (readIdx + 1). 
+            // To make it intuitive, we keep the pointer where the system "thinks" the read head is.
+            movePtr('ptr-read', readIdx);
+
+            // Update Stats
+            document.getElementById('stat-waiting').textContent = messagesWaiting;
+            const pct = (messagesWaiting / QUEUE_LENGTH) * 100;
+            document.getElementById('stat-bar').style.width = `${pct}%`;
+            
+            if(messagesWaiting === QUEUE_LENGTH) document.getElementById('stat-bar').classList.replace('bg-blue-600', 'bg-red-600');
+            else document.getElementById('stat-bar').classList.replace('bg-red-600', 'bg-blue-600');
+
+            // Update Lists
+            renderList('list-send', tasksWaitingToSend, 'T_Send', 'bg-orange-500');
+            renderList('list-receive', tasksWaitingToReceive, 'T_Recv', 'bg-purple-500');
+        }
+
+        function renderList(id, count, prefix, colorClass) {
+            const container = document.getElementById(id);
+            container.innerHTML = '';
+            for(let i=0; i<count; i++) {
+                const badge = document.createElement('div');
+                badge.className = `${colorClass} text-white px-2 py-1 rounded shadow text-[10px] font-bold animate-pulse`;
+                badge.innerHTML = `<span class="material-symbols-outlined text-[10px] align-middle">lock</span> ${prefix}_${i+1}`;
+                container.appendChild(badge);
+            }
+        }
+
+        function animateCopy(isWrite) {
+            const anim = document.getElementById('copy-anim-container');
+            const txt = isWrite ? "User Var -> memcpy -> Queue" : "Queue -> memcpy -> User Var";
+            anim.querySelector('span').nextSibling.textContent = " " + txt;
+            
+            // Show
+            anim.style.opacity = '1';
+            anim.style.transform = 'translateY(-20px) scale(1.1)';
+            
+            setTimeout(() => {
+                anim.style.opacity = '0';
+                anim.style.transform = 'translateY(0) scale(1)';
+            }, 800);
+        }
+
+        // --- SIMULATION ACTIONS ---
+
+        function simWrite() {
+            const valInput = document.getElementById('input-val');
+            let val = parseInt(valInput.value);
+            
+            // 1. Check if Full
+            if (messagesWaiting >= QUEUE_LENGTH) {
+                tasksWaitingToSend++;
+                log(`QUEUE FULL. Task blocked waiting to SEND. (List Size: ${tasksWaitingToSend})`);
+                updateVisuals();
+                return;
+            }
+
+            // 2. Perform Write
+            animateCopy(true);
+            setTimeout(() => {
+                // Logic directly from xQueueSend
+                queueStorage[writeIdx] = val;
+                
+                // Highlight visual
+                const slot = document.getElementById(`slot-${writeIdx}`);
+                slot.classList.add('cell-enter');
+                setTimeout(() => slot.classList.remove('cell-enter'), 300);
+
+                log(`Written [${val}] to index ${writeIdx}.`);
+
+                // Advance Write Pointer
+                writeIdx++;
+                if (writeIdx >= QUEUE_LENGTH) {
+                    writeIdx = 0;
+                    log(`pcWriteTo wrapped to start (Ring Buffer).`);
+                }
+
+                messagesWaiting++;
+
+                // 3. Check if any task was waiting to receive
+                if (tasksWaitingToReceive > 0) {
+                    tasksWaitingToReceive--;
+                    log(`Unblocked a task waiting to RECEIVE.`);
+                }
+
+                // Increment input for convenience
+                valInput.value = val + 1;
+                updateVisuals();
+            }, 200); // Small delay for animation feel
+        }
+
+        function simRead() {
+            // 1. Check if Empty
+            if (messagesWaiting === 0) {
+                tasksWaitingToReceive++;
+                log(`QUEUE EMPTY. Task blocked waiting to RECEIVE. (List Size: ${tasksWaitingToReceive})`);
+                updateVisuals();
+                return;
+            }
+
+            // 2. Perform Read
+            // In FreeRTOS, reading advances pointer FIRST, then reads
+            let nextReadIdx = readIdx + 1;
+            if (nextReadIdx >= QUEUE_LENGTH) nextReadIdx = 0;
+
+            animateCopy(false);
+            
+            setTimeout(() => {
+                const val = queueStorage[nextReadIdx];
+                queueStorage[nextReadIdx] = null; // Clear logic for visualization (FreeRTOS doesn't actually clear RAM, just moves pointer)
+                
+                readIdx = nextReadIdx;
+                log(`Read [${val}] from index ${readIdx}.`);
+
+                messagesWaiting--;
+
+                // 3. Check if any task was waiting to send
+                if (tasksWaitingToSend > 0) {
+                    tasksWaitingToSend--;
+                    log(`Unblocked a task waiting to SEND.`);
+                    // In real FreeRTOS, if a task was waiting to send and we just made space, 
+                    // context switch happens and that task writes immediately if priority is high.
+                    // We simulate that by "calling" write logic implicitly or just noting it.
+                    // For simplicity here, we just unblock it. Ideally, we should simulate the write too.
+                    
+                    // Optional: Simulate the unblocked task writing immediately
+                    setTimeout(() => {
+                        log(`(Auto) Unblocked task writes its data...`);
+                        simWrite(); // Recursive call safe here due to logic
+                    }, 500);
+                }
+
+                updateVisuals();
+            }, 200);
+        }
+
+        // --- UNION TOGGLE LOGIC ---
+        function setUnionMode(mode) {
+            const btnQueue = document.getElementById('btn-queue-mode');
+            const btnMutex = document.getElementById('btn-mutex-mode');
+            const codeQueue = document.getElementById('code-xQueue');
+            const codeSem = document.getElementById('code-xSemaphore');
+            const desc = document.getElementById('union-desc');
+
+            // Reset Styles
+            btnQueue.classList.remove('bg-blue-600', 'text-white', 'text-slate-400', 'hover:text-white');
+            btnMutex.classList.remove('bg-blue-600', 'text-white', 'text-slate-400', 'hover:text-white');
+            
+            codeQueue.classList.remove('opacity-50', 'line-through');
+            codeSem.classList.remove('opacity-50', 'line-through');
+
+            if(mode === 'queue') {
+                btnQueue.classList.add('bg-blue-600', 'text-white');
+                btnMutex.classList.add('text-slate-400', 'hover:text-white');
+                
+                codeSem.classList.add('opacity-50'); // Dim semaphore
+                codeQueue.classList.add('highlight-flash');
+                
+                desc.innerHTML = `Trong chế độ Queue: <code>u.xQueue</code> chứa <code>pcTail</code> và <code>pcReadFrom</code> để quản lý bộ đệm vòng.`;
+            } else {
+                btnMutex.classList.add('bg-blue-600', 'text-white');
+                btnQueue.classList.add('text-slate-400', 'hover:text-white');
+
+                codeQueue.classList.add('opacity-50'); // Dim queue
+                codeSem.classList.add('highlight-flash');
+
+                desc.innerHTML = `Trong chế độ Mutex: Struct dùng <code>u.xSemaphore</code>. Không cần buffer lưu trữ, chỉ cần đếm và quản lý quyền sở hữu (Recursive Mutex).`;
+            }
+            
+            // Remove animation class after run
+            setTimeout(() => {
+                codeQueue.classList.remove('highlight-flash');
+                codeSem.classList.remove('highlight-flash');
+            }, 1000);
+        }
+
+        // --- DOWNLOAD LOGIC ---
+        function downloadPage() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'freertos_queue_visualizer.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Init
+        window.addEventListener('resize', updateVisuals);
+        setTimeout(updateVisuals, 100); // Initial draw
+    </script>
+
+
+</body></html>
